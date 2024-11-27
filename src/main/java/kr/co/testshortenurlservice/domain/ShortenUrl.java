@@ -12,13 +12,14 @@ public class ShortenUrl {
     public ShortenUrl(String originalUrl, String shortenUrlKey) {
         this.originalUrl = originalUrl;
         this.shortenUrlKey = shortenUrlKey;
-    }
-
-    public ShortenUrl(String originalUrl, String shortenUrlKey, Long redirectCount) {
-        this.originalUrl = originalUrl;
-        this.shortenUrlKey = shortenUrlKey;
         this.redirectCount = 0L;
     }
+
+//    public ShortenUrl(String originalUrl, String shortenUrlKey, Long redirectCount) {
+//        this.originalUrl = originalUrl;
+//        this.shortenUrlKey = shortenUrlKey;
+//        this.redirectCount = 0L;
+//    } 아규먼트를 3개를 사용한 생성자가 없어서 redirectCount가 null로 나옴
 
     public static String generateShortenUrlKey() {
         String base56Characters = "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz";
@@ -48,6 +49,6 @@ public class ShortenUrl {
     }
 
     public void increasedRedirectCount() {
-        this.redirectCount++;
+        this.redirectCount+=1;
     }
 }

@@ -8,6 +8,7 @@ public class ShortenUrlResponseDto {
 //    private Long redirectCount;
 
 
+
     public ShortenUrlResponseDto() {}
 
     public ShortenUrlResponseDto(ShortenUrl shortenUrl) {
